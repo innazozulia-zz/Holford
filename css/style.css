@@ -1,0 +1,200 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+a {
+  color: #414040;
+  display: inline-block;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  display: inline-block;
+}
+.container {
+  max-width: 1030px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.header {
+  background-color: #c1bebe;
+  box-shadow: 7px 16px 8px -6px rgba(196, 194, 196, 0.78);
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+}
+.header__logo a {
+  font-family: "Liu Jian Mao Cao", cursive;
+  font-size: 55px;
+  line-height: 20px;
+  margin-top: 35px;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+.header__logo a span {
+  color: #000;
+  font-weight: 700;
+  font-size: 50px;
+}
+.header__menu {
+  margin-right: 20px;
+  font-weight: 700;
+}
+.header__menu li + li {
+  margin-left: 50px;
+}
+.header__menu a {
+  font-family: "Lato", sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  padding-top: 9px;
+  padding-bottom: 13px;
+}
+.drop-down__list {
+  transition: all 0.1s;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  position: absolute;
+  width: 200px;
+  background-color: #a1a1a1;
+  border-left: 1px solid rgb(255, 255, 255);
+  border-top: none;
+  border-bottom: 3px solid #fff;
+  box-shadow: 0px 5px 0px 0px rgba(42, 172, 200, 0.004);
+  padding: 10px 10px;
+  z-index: 1;
+}
+.drop-down__list a {
+  padding: 12px 0 12px 11px;
+  font-weight: 400;
+  display: block;
+}
+.drop-down__list a:hover {
+  color: #fff;
+}
+.header__drop-down .drop-down__list li {
+  margin-left: 0;
+  display: block;
+}
+.drop-down__list li + li a {
+  border-top: 1px solid #e7e7e7;
+}
+.header__drop-down .drop-down {
+  margin-left: 38px;
+}
+.header__drop-down.drop-down + .header__drop-down.drop-down {
+  margin-left: 12px;
+}
+.header__drop-down {
+  position: relative;
+}
+.header__drop-down > a {
+  position: relative;
+  padding-left: 11px;
+  padding-right: 26px;
+  border-top: 3px solid transparent;
+}
+.header__drop-down > a::after {
+  content: "";
+  position: absolute;
+  background-image: url(../img/down-arrow.png);
+  width: 7px;
+  height: 5px;
+  right: 8px;
+  margin-top: 9px;
+}
+.header__drop-down.drop-down:hover .drop-down__list {
+  height: auto;
+  overflow: visible;
+  opacity: 1;
+  border-left: 1px solid #a1a1a1;
+}
+.header__drop-down.drop-down:hover > a {
+  color: #fff;
+  border-top: 3px solid #fff;
+  background-color: #a1a1a1;
+  transition: all 0.3s;
+}
+.slider {
+  margin-top: 10px;
+  background-color: #f4f2f3;
+  padding: 20px 0 10px;
+}
+.slider__item {
+  background-image: url(../img/2.jpg);
+  min-height: 440px;
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.slider__item-titile {
+  font-family: "Liu Jian Mao Cao", cursive;
+  font-size: 50px;
+  font-weight: 700;
+  color: #000;
+  line-height: 60px;
+  padding-top: 35px;
+  padding-left: 150px;
+}
+.slick-dots li button {
+  width: 14px;
+  height: 14px;
+  background-color: rgba(98, 98, 98, 0.5);
+  border-radius: 50%;
+}
+.slick-dots li.slick-active button {
+  background-color: #7785ac;
+}
+.slick-dots li button:before {
+  display: none;
+}
+.slick-dots li {
+  margin: 0 9px;
+  width: auto;
+  height: auto;
+}
+.items {
+  background-color: #d0d0d0;
+  padding: 60px 0px 50px;
+  box-shadow: 9px -13px 26px 0px rgba(0, 0, 0, 0.49);
+}
+.items__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.item {
+  width: 225px;
+}
+.item__title {
+  font-family: "Liu Jian Mao Cao", cursive;
+  font-size: 25px;
+  margin-bottom: 40px;
+  padding-left: 50px;
+  position: relative;
+}
+.item__text {
+  font-family: "Lato", sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  margin-bottom: 40px;
+}
+.item__icons {
+  position: absolute;
+  left: 0;
+}
+.pic {
+  width: 40px;
+  height: 40px;
+}
